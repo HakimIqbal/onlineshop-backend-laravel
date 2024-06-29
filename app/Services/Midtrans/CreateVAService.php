@@ -17,7 +17,6 @@ class CreateVAService extends Midtrans
 
     public function getVA()
     {
-
         $itemDetails = [];
 
         foreach ($this->order->orderItems as $orderItem) {

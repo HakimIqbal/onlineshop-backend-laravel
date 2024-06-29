@@ -10,13 +10,15 @@ class UserSeeder extends Seeder
 {
     /**
      * Run the database seeds.
+     *
+     * @return void
      */
-    public function run(): void
+    public function run()
     {
         \App\Models\User::factory(9)->create();
 
         $user = \App\Models\User::factory()->create([
-            'name' => 'Admin',
+            'name' => 'Admin Iqbal',
             'email' => 'muh.iqbal.hakim@gmail.com',
             'password' => Hash::make('12345678'),
             'phone' => '081939497547',
@@ -24,3 +26,4 @@ class UserSeeder extends Seeder
         ]);
     }
 }
+

@@ -22,6 +22,8 @@ class CategoryController extends Controller
     //store
     public function store(Request $request)
     {
+        // $filename = time() . '.' . $request->image->extension();
+        // $request->image->storeAs('public/category', $filename);
         $validated = $request->validate([
             'name' => 'required|max:100',
         ]);
@@ -46,6 +48,12 @@ class CategoryController extends Controller
         ]);
 
         $category = \App\Models\Category::findOrFail($id);
+        //  //if image is not empty, then update the image
+        //  if ($request->image) {
+        //     $filename = time() . '.' . $request->image->extension();
+        //     $request->image->storeAs('public/category', $filename);
+        //     $category->image = $filename;
+        // }
         $category->update($validated);
 
         return redirect()->route('category.index')->with('success', 'Category updated successfully');

@@ -42,7 +42,6 @@ class OrderController extends Controller
             'status' => $request->status,
             'shipping_resi' => $request->shipping_resi,
         ]);
-
         //send notification to user
         if ($request->status == 'on_delivery') {
             $this->sendNotificationToUser($order->first()->user_id, 'Paket Dikirim dengan nomor resi ' . $request->shipping_resi);
@@ -55,6 +54,7 @@ class OrderController extends Controller
     public function sendNotificationToUser($userId, $message)
     {
         // Dapatkan FCM token user dari tabel 'users'
+
         $user = User::find($userId);
         $token = $user->fcm_id;
 

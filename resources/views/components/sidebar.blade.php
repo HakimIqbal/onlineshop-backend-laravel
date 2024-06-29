@@ -46,7 +46,6 @@
 
                 </ul>
             </li>
-
             <li class="nav-item dropdown ">
                 <a href="#" class="nav-link has-dropdown"><i class="fas fa-fire"></i><span>Orders</span></a>
                 <ul class="dropdown-menu">
