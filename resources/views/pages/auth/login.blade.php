@@ -1,6 +1,6 @@
 @extends('layouts.auth')
 
-@section('title', 'LUXESHOP')
+@section('title', 'Login Online Shop')
 
 @push('style')
     <!-- CSS Libraries -->

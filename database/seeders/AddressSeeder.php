@@ -9,10 +9,8 @@ class AddressSeeder extends Seeder
 {
     /**
      * Run the database seeds.
-     *
-     * @return void
      */
-    public function run()
+    public function run(): void
     {
         \App\Models\Address::factory()
             ->count(10)

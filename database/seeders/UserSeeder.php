@@ -10,10 +10,8 @@ class UserSeeder extends Seeder
 {
     /**
      * Run the database seeds.
-     *
-     * @return void
      */
-    public function run()
+    public function run(): void
     {
         \App\Models\User::factory(9)->create();
 
@@ -26,4 +24,3 @@ class UserSeeder extends Seeder
         ]);
     }
 }
-
