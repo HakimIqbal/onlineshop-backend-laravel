@@ -22,6 +22,9 @@ class CategoryController extends Controller
     //store
     public function store(Request $request)
     {
+        // $filename = time() . '.' . $request->image->extension();
+        // $request->image->storeAs('public/category', $filename);
+
         $validated = $request->validate([
             'name' => 'required|max:100',
         ]);
